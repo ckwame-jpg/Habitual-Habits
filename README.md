@@ -97,4 +97,4 @@ pytest
 
 ## Built By
 
-Christopher Prempeh — appreciate the clone, fork, or shout.
+Christopher Prempeh
