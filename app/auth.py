@@ -1,3 +1,4 @@
+import os
 from fastapi import APIRouter
 from datetime import datetime, timedelta
 from jose import JWTError, jwt
@@ -14,9 +15,9 @@ def hash_password(password: str) -> str:
 
 
 # JWT Config and Helper Functions
-SECRET_KEY = "your_secret_key_here"
+SECRET_KEY = os.getenv("SECRET_KEY", "your_secret_key_here")
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 30))
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/login")
 
