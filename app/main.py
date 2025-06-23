@@ -1,9 +1,13 @@
+import os
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from app.database import Base, engine
 from app import models
 from app.routes.users import router as users_router
 from app.routes.habits import router as habits_router
 from app.auth import router as auth_router
+
+load_dotenv()
 
 app = FastAPI()
 app.include_router(users_router)
