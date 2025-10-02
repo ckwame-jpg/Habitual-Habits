@@ -1,6 +1,6 @@
 # 🧱 Habit Tracker API
 
-A backend API for tracking daily habits — built with FastAPI, locked in with JWT auth, and wrapped up in Docker so it runs anywhere.
+A backend API for tracking daily habits, built with FastAPI, locked in with JWT auth, and wrapped up in Docker so it runs anywhere.
 
 ---
 
