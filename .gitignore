@@ -7,6 +7,9 @@ dist/
 build/
 venv/
 
+# Database
+*.db
+
 # Environment
 .env
 
