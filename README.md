@@ -7,19 +7,19 @@ A habit tracking API built with FastAPI. Supports user authentication, full habi
 - JWT-based authentication (register and login)
 - Create, read, update, and delete habits
 - Log daily completions for each habit
-- Streak tracking — see how many consecutive days you've completed a habit
+- Streak tracking - see how many consecutive days you've completed a habit
 - Auto-generated interactive API docs (Swagger UI)
 
 ## Tech Stack
 
-- **FastAPI** — Python web framework
-- **SQLAlchemy** — ORM for database operations
-- **SQLite** — lightweight database
-- **Pydantic** — request/response validation
-- **python-jose** — JWT token handling
-- **bcrypt** — password hashing
-- **Docker** — containerized deployment
-- **pytest** — test suite
+- **FastAPI** - Python web framework
+- **SQLAlchemy** - ORM for database operations
+- **SQLite** - lightweight database
+- **Pydantic** - request/response validation
+- **python-jose** - JWT token handling
+- **bcrypt** - password hashing
+- **Docker** - containerized deployment
+- **pytest** - test suite
 
 ## Quick Start
 
