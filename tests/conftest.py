@@ -8,7 +8,7 @@ from app.database import Base, get_db
 from app import models  # noqa: F401 - ensures models are registered
 from app.main import app
 
-# In-memory SQLite for tests — StaticPool ensures a single shared connection
+# In-memory SQLite for tests - StaticPool ensures a single shared connection
 engine = create_engine(
     "sqlite:///:memory:",
     connect_args={"check_same_thread": False},
