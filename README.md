@@ -1,5 +1,7 @@
 # Habitual Habits
 
+[![CI](https://github.com/ckwame-jpg/Habitual-Habits/actions/workflows/ci.yml/badge.svg)](https://github.com/ckwame-jpg/Habitual-Habits/actions/workflows/ci.yml)
+
 A habit tracking API built with FastAPI. Supports user authentication, full habit CRUD, completion logging, and streak tracking.
 
 ## Features
