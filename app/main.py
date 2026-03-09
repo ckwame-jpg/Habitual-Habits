@@ -1,13 +1,15 @@
-import os
 from contextlib import asynccontextmanager
+
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.database import Base, engine, SessionLocal
+
 from app import models
-from app.routes.users import router as users_router
+from app.auth import hash_password
+from app.auth import router as auth_router
+from app.database import Base, SessionLocal, engine
 from app.routes.habits import router as habits_router
-from app.auth import router as auth_router, hash_password
+from app.routes.users import router as users_router
 
 load_dotenv()
 
