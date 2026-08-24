@@ -1,11 +1,18 @@
-import pytest
-from fastapi.testclient import TestClient
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.pool import StaticPool
+import os
 
-from app import models  # noqa: F401 - ensures models are registered
-from app.database import Base, get_db
+# Set test config before any app imports. app.auth reads SECRET_KEY at import
+# time, so without a default here a fresh clone fails to collect.
+os.environ.setdefault("SECRET_KEY", "test-secret-key")
+os.environ.setdefault("DATABASE_URL", "sqlite:///:memory:")
+
+import pytest  # noqa: E402
+from fastapi.testclient import TestClient  # noqa: E402
+from sqlalchemy import create_engine  # noqa: E402
+from sqlalchemy.orm import sessionmaker  # noqa: E402
+from sqlalchemy.pool import StaticPool  # noqa: E402
+
+from app import models  # noqa: F401,E402 - ensures models are registered
+from app.database import Base, get_db  # noqa: E402
 from app.main import app
 
 # In-memory SQLite for tests - StaticPool ensures a single shared connection
